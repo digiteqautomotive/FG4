@@ -1,6 +1,6 @@
 # FG4 frame grabber cards
 
-![FG4 product photo](fg4.webp)
+![FG4 product photo](FG4.webp)
 
 Digiteq Automotive FrameGrabber 4 (FG4) is a PCIe card capable of capturing and
 generating FPD-Link III and GMSL2/3 video streams as used in the automotive
@@ -16,30 +16,28 @@ of Linux starting with version 6.7 of the kernel.
 
 ### Configuration
 
-Several FG4-specific aspects may/must be configured in `sysfs` to get/provide
-the desired FPD-Link III or GMSL2/3 streams. The whole interface is documented
-in [admin-guide/media/mgb4.html](https://docs.kernel.org/admin-guide/media/mgb4.html)
-of the Linux kernel's documentation.
+Several FG4-specific aspects may/must be configured in _sysfs_ to get/provide
+the desired FPD-Link/GMSL2 streams. The whole configuration interface is
+documented in the [admin-guide/media/mgb4.html](https://docs.kernel.org/admin-guide/media/mgb4.html)
+section of the Linux kernel's documentation.
 
-To change any of the parameters simply write into the appropriate sysfs files:
+To change any of the parameters simply write into the appropriate _sysfs_ files:
 
 ```console
 $ echo 0 > /sys/class/video4linux/video0/color_mapping
 ```
 
-As usual in Linux, permanent sysfs configuration must be provided externaly
-using a UDEV configuration. See the [98-mgb4.rules](examples/UDEV/98-mgb4.rules) file
+As usual in Linux, permanent _sysfs_ configuration must be provided externaly
+using a _UDEV_ configuration. See the [98-mgb4.rules](examples/UDEV/98-mgb4.rules) file
 for some example configuration. Usually you only have to configure the
 outputs[^1], the inputs are properly autodetected from the video streams.
 
 [^1]: There is no (reliable working) EDID-like mechanism in FPD-Link/GMSL2.
 
-### v4l2 API documentation
+### API documentation
 
 Everything except the FG4-specific configuration described above is controlled
-using a standard v4l2 API:
-
-[Video for Linux API](https://docs.kernel.org/userspace-api/media/v4l/v4l2.html)
+using a standard [v4l2 API](https://docs.kernel.org/userspace-api/media/v4l/v4l2.html).
 
 ### Sample applications
 
