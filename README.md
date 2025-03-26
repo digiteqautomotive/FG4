@@ -32,7 +32,7 @@ using a _UDEV_ configuration. See the [98-mgb4.rules](examples/UDEV/98-mgb4.rule
 file for some example configuration. Usually you only have to configure the
 outputs[^1], the inputs are properly autodetected from the video streams.
 
-[^1]: There is no (reliable working) EDID-like mechanism in FPD-Link/GMSL2.
+[^1]: There is no (reliable/working) EDID-like mechanism in FPD-Link/GMSL2.
 
 ### Firmware update
 
@@ -41,6 +41,8 @@ change/update the firmware use the
 [fw-flash](https://github.com/digiteqautomotive/linux-flash) tool.
 The latest firmwares are available at
 [fg4.digiteqautomotive.com](https://fg4.digiteqautomotive.com/).
+
+_A PC power cycle is required after flashing the card, a simple reboot is not sufficient!_
 
 ### API documentation
 
