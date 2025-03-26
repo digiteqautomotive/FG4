@@ -28,7 +28,7 @@ $ echo 0 > /sys/class/video4linux/video0/color_mapping
 ```
 
 As usual in Linux, permanent sysfs configuration must be provided externaly
-using a UDEV configuration. See the [98-mgb4.rules](UDEV/98-mgb4.rules) file
+using a UDEV configuration. See the [98-mgb4.rules](examples/UDEV/98-mgb4.rules) file
 for some example configuration. Usually you only have to configure the
 outputs[^1], the inputs are properly autodetected from the video streams.
 
