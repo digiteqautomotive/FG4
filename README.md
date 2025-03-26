@@ -34,6 +34,12 @@ outputs[^1], the inputs are properly autodetected from the video streams.
 
 [^1]: There is no (reliable working) EDID-like mechanism in FPD-Link/GMSL2.
 
+### Firmware update
+
+For different modules (FPD-Link/GMSL), different card firmware is required. To change/update
+the firmware use the [fw-flash](https://github.com/digiteqautomotive/linux-flash) tool.
+The latest firmwares are available at [fg4.digiteqautomotive.com](https://fg4.digiteqautomotive.com/).
+
 ### API documentation
 
 Everything except the FG4-specific configuration described above is controlled
