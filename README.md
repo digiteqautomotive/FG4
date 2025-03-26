@@ -60,3 +60,21 @@ Additionaly two simple examples how to use the FG4 cards from Python using
 OpenCV are provided here. The first (`cam.py`) is a very basic media player.
 The second one (`io.py`) is a more advanced example of streaming a video stream
 grabbed on input to an output while drawing a text overlay over it.
+
+
+## Windows
+
+On Windows a standard DirectShow interface is used to access the card.
+FG4-specific settings are configured using _Windows COM_.
+
+### Configuration
+
+Several FG4-specific aspects may/must be configured using _Windows COM_ to
+get/provide the desired FPD-Link/GMSL2 streams. See the
+[COM example code](examples/com/fg4.cpp) for how to do this. For all available
+options see the [fg4.idl](examples/com/fg4.idl) IDL file.
+
+### API documentation
+
+Everything except the FG4-specific configuration described above is controlled
+using a standard [DirectShow API](https://learn.microsoft.com/en-us/windows/win32/directshow/directshow).
