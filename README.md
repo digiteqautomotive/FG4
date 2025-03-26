@@ -28,17 +28,19 @@ $ echo 0 > /sys/class/video4linux/video0/color_mapping
 ```
 
 As usual in Linux, permanent _sysfs_ configuration must be provided externaly
-using a _UDEV_ configuration. See the [98-mgb4.rules](examples/UDEV/98-mgb4.rules) file
-for some example configuration. Usually you only have to configure the
+using a _UDEV_ configuration. See the [98-mgb4.rules](examples/UDEV/98-mgb4.rules)
+file for some example configuration. Usually you only have to configure the
 outputs[^1], the inputs are properly autodetected from the video streams.
 
 [^1]: There is no (reliable working) EDID-like mechanism in FPD-Link/GMSL2.
 
 ### Firmware update
 
-For different modules (FPD-Link/GMSL), different card firmware is required. To change/update
-the firmware use the [fw-flash](https://github.com/digiteqautomotive/linux-flash) tool.
-The latest firmwares are available at [fg4.digiteqautomotive.com](https://fg4.digiteqautomotive.com/).
+For different modules (FPD-Link/GMSL), different card firmware is required. To
+change/update the firmware use the
+[fw-flash](https://github.com/digiteqautomotive/linux-flash) tool.
+The latest firmwares are available at
+[fg4.digiteqautomotive.com](https://fg4.digiteqautomotive.com/).
 
 ### API documentation
 
@@ -49,8 +51,8 @@ using a standard [v4l2 API](https://docs.kernel.org/userspace-api/media/v4l/v4l2
 
 For a complex sample application see [DQ Viewer](https://github.com/digiteqautomotive/dqview),
 a simple libVLC-based media player that is capable of configuring FG4 devices,
-play the v4l2 camera streams as well as produce v4l2 video outputs sourced by
-standard H264/MPEG videos.
+playing v4l2 camera streams as well as producing v4l2 video outputs sourced
+by standard H264/MPEG video files.
 
 Additionaly two simple examples how to use the FG4 cards from Python using
 OpenCV are provided here. The first (`cam.py`) is a very basic media player.
