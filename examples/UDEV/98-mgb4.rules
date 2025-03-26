@@ -1,0 +1,23 @@
+# Set the first video output to 1080x1920 and video source to V4l2 output one.
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{video_source}="2"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{display_height}="1080"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{display_width}="1920"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{pclk_frequency}="150000"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{hsync_width}="40"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{vsync_width}="20"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{hback_porch}="50"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{hfront_porch}="50"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{vback_porch}="31"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="0", ATTR{vfront_porch}="30"
+
+# Set the second video output to 1080x1920 and video source to loopback of input two.
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{video_source}="1"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{display_height}="1080"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{display_width}="1920"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{pclk_frequency}="150000"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{hsync_width}="40"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{vsync_width}="20"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{hback_porch}="50"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{hfront_porch}="50"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{vback_porch}="31"
+SUBSYSTEM=="video4linux", SUBSYSTEMS=="pci", ATTRS{vendor}=="0x1ed8", ATTRS{device}=="0x0?01", ATTR{output_id}=="1", ATTR{vfront_porch}="30"
