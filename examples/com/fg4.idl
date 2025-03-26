@@ -1,0 +1,108 @@
+import "unknwn.idl";
+
+[
+    object,
+    uuid( 17a9bb56-727e-449f-bf0a-fac840e4d1ff ),
+    pointer_default(unique)
+]
+
+interface IFG4InputConfig: IUnknown
+{
+    HRESULT GetOldiLink([out, retval] long* plOldiLink);
+    HRESULT SetOldiLink([in] long lOldiLink);
+    HRESULT GetGmslRate([out, retval] long* plRate);
+    HRESULT SetGmslRate([in] long lRate);
+    HRESULT GetStreamId([out, retval] long* plStreamId);
+    HRESULT SetStreamId([in] long lStreamId);
+    HRESULT GetColorMapping([out, retval] long* plColorMapping);
+    HRESULT SetColorMapping([in] long lColorMapping);
+    HRESULT GetGmslFEC([out, retval] long* plGmslFEC);
+    HRESULT SetGmslFEC([in] long lGmslFEC);
+    HRESULT GetVFlip([out, retval] long* plVFlip);
+    HRESULT SetVFlip([in] long lVFlip);
+    HRESULT GetChannel([out, retval] long* plChannel);
+    HRESULT GetDeGap2VS([out, retval] long* plDeGap2VS);
+    HRESULT SetDeGap2VS([in] long lDeGap2VS);
+    HRESULT GetDeGap2HS([out, retval] long* plDeGap2HS);
+    HRESULT SetDeGap2HS([in] long lDeGap2HS);
+    HRESULT GetHsStatus([out, retval] long* plGetHsStatus);
+    HRESULT GetVsStatus([out, retval] long* plVsStatus);
+    HRESULT GetLinkLckStatus([out, retval] long* plLinkLckStatus);
+    HRESULT GetPclkStatus([out, retval] long* plPclkStatus);
+    HRESULT GetFrameCounter([out, retval] long* plFrameCounter);
+    HRESULT GetFpdl3InputWidth([out, retval] long* plInputWidth);
+    HRESULT SetFpdl3InputWidth([in] long lInputWidth);
+    HRESULT GetFpgaFwId([out,retval] long* FpgaFwId);
+    HRESULT GetEncodeTriggers([out, retval] long* plEncodeTriggers);
+    HRESULT SetEncodeTriggers([in] long lEncodeTriggers);
+    HRESULT GetDetectedResolution([out, retval] long* plResolution);
+    HRESULT GetPclkFrequency([out, retval] long* plPclkFrequency);
+    HRESULT GetCardSerial([out, retval] long* plSerialNum);
+    HRESULT GetModuleId([out, retval] long* plModuleId);
+    HRESULT GetDroppedFrames([out, retval] long* plDroppedFrames);
+    HRESULT GetTriggerStatus([out, retval] long *plTriggerStatus);
+    HRESULT GetDriverVersion([out] long *pAppVersion, [out] long *pAppRevision, [out] long *pAppSubRevision);
+    HRESULT GetVideoValid([out, retval] long *plVideoValid);
+    HRESULT GetDefaultColor([out, retval] long* plDefaultColor);
+    HRESULT SetDefaultColor([in] long lDefaultColor);
+    HRESULT GetInputFrequencyRange([out, retval] long* plInputFreqRange);
+    HRESULT SetInputFrequencyRange([in] long lInputFreqRange);
+    HRESULT GetPolarityHSYNC([out, retval] long *plPolHSYNC);
+    HRESULT GetPolarityVSYNC([out, retval] long *pPolVSYNC);
+    HRESULT GetHFrontPorch([out, retval] long *plHFrontPorch);
+    HRESULT GetVFrontPorch([out, retval] long *plVFrontPorch);
+    HRESULT GetHBackPorch([out, retval] long *plHBackPorch);
+    HRESULT GetVBackPorch([out, retval] long *plVBackPorch);
+    HRESULT GetWidthHSYNC([out, retval] long *plPolHSYNC);
+    HRESULT GetWidthVSYNC([out, retval] long *pPolVSYNC);
+    HRESULT GetCoreTemp([out, retval] float *pCoreTemp);
+};
+
+
+[
+    object,
+    uuid( 050E4C9D-153B-4a62-A482-A7FFAEE1B4A6 ),
+    pointer_default(unique)
+]
+
+interface IFG4OutputConfig: IUnknown
+{
+    HRESULT GetChannel([out, retval] long* plChannel);
+    HRESULT GetFpgaFwId([out,retval] long* FpgaFwId);
+    HRESULT GetSignalSource([out, retval] long *plSignalSource);
+    HRESULT SetSignalSource([in] long lSignalSource);
+    HRESULT GetResolution([out, retval] long* plResolution);
+    HRESULT SetResolution([in] long lResolution);
+    HRESULT GetFramerate([out, retval] long *plFramerate);
+    HRESULT SetFramerate([in] long lFramerate);
+    HRESULT GetPolarityHSYNC([out, retval] long *plPolHSYNC);
+    HRESULT SetPolarityHSYNC([in] long lPolHSYNC);
+    HRESULT GetPolarityVSYNC([out, retval] long *pPolVSYNC);
+    HRESULT SetPolarityVSYNC([in] long lPolVSYNC);
+    HRESULT GetPolarityDE([out, retval] long *plPolDE);
+    HRESULT SetPolarityDE([in] long lPolDE);
+    HRESULT GetHFrontPorch([out, retval] long *plHFrontPorch);
+    HRESULT SetHFrontPorch([in] long lHFrontPorch);
+    HRESULT GetVFrontPorch([out, retval] long *plVFrontPorch);
+    HRESULT SetVFrontPorch([in] long lVFrontPorch);
+    HRESULT GetHBackPorch([out, retval] long *plHBackPorch);
+    HRESULT SetHBackPorch([in] long lHBackPorch);
+    HRESULT GetVBackPorch([out, retval] long *plVBackPorch);
+    HRESULT SetVBackPorch([in] long lVBackPorch);
+    HRESULT GetCardSerial([out, retval] long* plSerialNum);
+    HRESULT GetModuleId([out, retval] long* plModuleId);
+    HRESULT GetFpdl3OutputWidth([out, retval] long* plOutputWidth);
+    HRESULT SetFpdl3OutputWidth([in] long lOutputWidth);
+    HRESULT GetChannelActive([out, retval] long *plChActive);
+    HRESULT SetChannelActive([in] long lChActive);
+    HRESULT GetVFlip([out, retval] long* plVFlip);
+    HRESULT SetVFlip([in] long lVFlip);
+    HRESULT GetDriverVersion([out] long *pAppVersion, [out] long *pAppRevision, [out] long *pAppSubRevision);
+    HRESULT GetPclkFreq([out, retval] long* plPclkFreq);
+    HRESULT SetPclkFreq([in] long lPclkFreq);
+    HRESULT GetWidthHSYNC([out, retval] long *plPolHSYNC);
+    HRESULT SetWidthHSYNC([in] long lPolHSYNC);
+    HRESULT GetWidthVSYNC([out, retval] long *pPolVSYNC);
+    HRESULT SetWidthVSYNC([in] long lPolVSYNC);
+    HRESULT GetCoreTemp([out, retval] float *pCoreTemp);
+};
