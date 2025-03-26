@@ -57,9 +57,10 @@ playing v4l2 camera streams as well as producing v4l2 video outputs sourced
 by standard H264/MPEG video files.
 
 Additionaly two simple examples how to use the FG4 cards from Python using
-OpenCV are provided here. The first (`cam.py`) is a very basic media player.
-The second one (`io.py`) is a more advanced example of streaming a video stream
-grabbed on input to an output while drawing a text overlay over it.
+OpenCV are provided here. [cam.py](examples/v4l2/OpenCV/camera/cam.py) is a very basic
+media player. [io.py](examples/v4l2/OpenCV/output/io.py) is a more advanced example of
+streaming a video stream grabbed on input to an output while drawing a text overlay
+over it.
 
 
 ## Windows
