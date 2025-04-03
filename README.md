@@ -71,7 +71,7 @@ FG4-specific settings are configured using _Windows COM_.
 ### Configuration
 
 Several FG4-specific aspects may/must be configured using _Windows COM_ to
-get/provide the desired FPD-Link/GMSL2 streams. See the
+get/provide the desired FPD-Link/GMSL streams. See the
 [COM example code](examples/COM/fg4.cpp) for how to do this. For all available
 options see the [fg4.idl](examples/COM/fg4.idl) IDL file.
 
