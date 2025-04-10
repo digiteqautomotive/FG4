@@ -45,8 +45,7 @@ static IFG4InputConfig* inputConfig(int id)
 							Xorder--;
 							piFilter->Release();
 							piConfig->Release();
-						}
-						else {
+						} else {
 							piFilter->Release();
 							piMoniker->Release();
 							piEnumMoniker->Release();
@@ -101,8 +100,7 @@ static IFG4OutputConfig* outputConfig(int id)
 							Xorder--;
 							piFilter->Release();
 							piConfig->Release();
-						}
-						else {
+						} else {
 							piFilter->Release();
 							piMoniker->Release();
 							piEnumMoniker->Release();
