@@ -10,7 +10,7 @@ on Linux. It continuously reads from the IIO device and prints the timestamp
 echo 1 > /sys/bus/iio/devices/iio:device0/scan_elements/in_activity_en
 echo 1 > /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_en
 cat /sys/bus/iio/devices/trigger0/name > /sys/bus/iio/devices/iio:device0/trigger/current_trigger
-echo 1 > /sys/bus/iio/devices/iio\:device0/buffer/enable
+echo 1 > /sys/bus/iio/devices/iio:device0/buffer/enable
 ```
 
 ## Build
