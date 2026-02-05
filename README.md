@@ -62,6 +62,9 @@ media player. [io.py](examples/v4l2/OpenCV/output/io.py) is a more advanced exam
 streaming a video stream grabbed on input to an output while drawing a text overlay
 over it.
 
+In addition to the video inputs/outputs the card also provides two GPIO triggers that can
+be used to capture external events related to the video streams. The [IIO](examples/IIO)
+example shows how to confifgure the IIO device and process the events.
 
 ## Windows
 
