@@ -1,8 +1,9 @@
 # Triggers
 
-This example shows how to use the fg4 triggers in the "triggered buffer" mode
-on Linux. It continuously reads from the IIO device and prints the timestamp
-(in nanoseconds) and the active trigger signal(s) of every trigger event.
+This example shows how to use the card's GPIO triggers in the "triggered buffer"
+mode on Linux. It continuously reads from the IIO device and prints
+the timestamp (in nanoseconds) and the active trigger signal(s) of every trigger
+event.
 
 ## IIO Device Setup
 
